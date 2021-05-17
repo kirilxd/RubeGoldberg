@@ -14,7 +14,15 @@ protocol LoggerProtocol{
 
 struct Logger: LoggerProtocol{
     
-    var message: String = ""
+    var message: String = ""{
+        didSet{
+            print("Message did set")
+        }
+        willSet{
+            print("Message will set")
+        }
+    }
+    
     
     mutating func printMessage() -> Void {
         if self.message.isEmpty {

@@ -50,4 +50,7 @@ class Adder{
         }
         
     }
+    deinit {
+        print("deinitialized")
+    }
 }
