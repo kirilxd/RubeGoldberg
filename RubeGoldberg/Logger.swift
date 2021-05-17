@@ -20,10 +20,9 @@ struct Logger: LoggerProtocol{
         if self.message.isEmpty {
             print("Nothing to print")
         }else{
-            print(self.message)
+            print("Result: \(self.message)")
         }
     }
-
     
     init(_ message: String){
         self.message = message;

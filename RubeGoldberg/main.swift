@@ -8,5 +8,8 @@
 import Foundation
 
 var message = Logger("Hello world");
-message.printMessage();
-
+print("Enter numbers")
+var s: String = readLine()!;
+let digits = s.compactMap{$0.wholeNumberValue}
+let adder = Adder(numbers: digits, logger: message);
+adder.outputResult();
